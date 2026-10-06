@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Pune survey</name>
+    <Folder>
+      <name>Parcels</name>
+      <Placemark>
+        <name>Park boundary</name>
+        <description>Public park, outer boundary only</description>
+        <ExtendedData>
+          <Data name="owner"><value>PMC</value></Data>
+          <Data name="zone"><value>A</value></Data>
+        </ExtendedData>
+        <Polygon>
+          <outerBoundaryIs><LinearRing><coordinates>
+            73.8500,18.5000,0 73.8600,18.5000,0 73.8600,18.5100,0 73.8500,18.5100,0 73.8500,18.5000,0
+          </coordinates></LinearRing></outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>Plot with courtyard (hole)</name>
+        <Polygon>
+          <outerBoundaryIs><LinearRing><coordinates>
+            73.8700,18.5200 73.8800,18.5200 73.8800,18.5300 73.8700,18.5300 73.8700,18.5200
+          </coordinates></LinearRing></outerBoundaryIs>
+          <innerBoundaryIs><LinearRing><coordinates>
+            73.8730,18.5230 73.8770,18.5230 73.8770,18.5270 73.8730,18.5270 73.8730,18.5230
+          </coordinates></LinearRing></innerBoundaryIs>
+        </Polygon>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Network</name>
+      <Placemark>
+        <name>Main road</name>
+        <ExtendedData><SchemaData schemaUrl="#roads">
+          <SimpleData name="class">arterial</SimpleData>
+        </SchemaData></ExtendedData>
+        <LineString><coordinates>
+          73.8500,18.5000 73.8550,18.5050 73.8600,18.5100 73.8650,18.5150
+        </coordinates></LineString>
+      </Placemark>
+      <Placemark>
+        <name>Survey benchmark</name>
+        <Point><coordinates>73.8550,18.5050,560</coordinates></Point>
+      </Placemark>
+    </Folder>
+    <Placemark>
+      <name>Mixed collection (polygon + point)</name>
+      <MultiGeometry>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          73.9000,18.5500 73.9050,18.5500 73.9050,18.5550 73.9000,18.5500
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+        <Point><coordinates>73.9100,18.5600</coordinates></Point>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark>
+      <name>Label only (no geometry)</name>
+    </Placemark>
+  </Document>
+</kml>
